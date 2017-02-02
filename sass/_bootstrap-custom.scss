@@ -1,0 +1,220 @@
+/* ............................................ - Desing - ............................................ */
+/* .................................................................................................... */
+
+/* ............................................ - 1.navbar-custom desing - ............................................ */
+
+//*Variables*//
+$orange_main: #df572b;
+$orange_hover: #bf451e;
+$orange_border: 1px solid #9a3413;
+
+$white_color_font: #FFF;
+
+
+///////////////
+.navbar-custom 
+{
+  background-color: $orange_main;
+  border-color: none;
+
+  .navbar-collapse
+  {
+    border-color: none;
+  }
+
+  .navbar-link 
+  {
+    color: $white_color_font;
+    &:hover 
+    {
+      color: $white_color_font;
+    }
+
+  }
+
+  /* ............................................ - 1.1.navbar-nav - ............................................ */
+  .navbar-nav
+  {
+    li>a
+    {
+      color: $white_color_font;
+      &:hover, &:focus
+      {
+        color: $white_color_font;
+        background-color: $orange_hover;
+      }
+    }
+    
+    .active
+    {
+      a
+      {
+        color: $white_color_font;
+        background-color: $orange_main;
+      }
+      a:hover, a:focus
+      {
+        background-color: $orange_hover;
+      }
+    }
+
+    .disabled
+    {
+      a, a:hover, a:focus
+      {
+        color: $white_color_font;
+        background-color: transparent;
+      }
+    }
+
+    .open
+    {
+      a, a:hover, a:focus
+      {
+        background-color: $orange_hover;
+        color: $white_color_font;
+      }
+    }
+
+
+  }
+
+  /* ............................................ - 1.2.navbar-toggle - ............................................ */
+  .navbar-toggle 
+  {
+
+    border-color: $orange_main;
+
+    &:hover, &:focus
+    {
+      background-color: $orange_hover;
+    }
+
+    .icon-bar 
+    {
+      background-color: $white_color_font;
+    }
+  }
+}
+
+/* ............................................ - 2.Media at 768px Desing - ............................................ */
+
+
+@media (min-width: 768px)
+{
+  .header-nav
+  {
+    border-top: $orange_border;
+    border-bottom: $orange_border;
+  }
+
+  .navbar-custom
+  {
+
+
+    .navbar-nav
+    {
+      li
+      {
+        border-right: $orange_border;
+        &:first-child
+        {
+          border-left: $orange_border;
+        }
+      }
+    }
+  }
+}
+
+
+
+/* ............................................ - Structure - ............................................ */
+/* ....................................................................................................... */
+
+/* ............................................ - 1.navbar structure - ............................................ */
+.header-nav
+{
+  .navbar
+  {
+    margin-bottom: 0;
+  }
+}
+
+
+/* ............................................ - 2.navbar-custom structure - ............................................ */
+
+.navbar-custom 
+{
+  .navbar-header
+  {
+    &:before, &:after
+    {
+      display: none;
+    }
+  }
+
+  .navbar-nav 
+  {
+    margin: 0 -15px;
+    li>a
+    {
+      text-align: center;
+    }
+  }
+
+
+  .navbar-toggle 
+  {
+    float: left;
+    margin: 5px 5px 5px -10px;
+    padding: 9px 10px; 
+
+    .icon-bar 
+    {
+      width: 24px;
+      height: 4px;
+      border-radius: 1px;
+    }  
+  }
+
+  .navbar-collapse 
+  {
+    padding-right: 41px;
+    box-shadow: none;
+  }
+
+  .navbar-toggle .icon-bar + .icon-bar 
+  {
+    margin-top: 4px;
+  }
+
+}
+
+
+/* ............................................ - 3.Media at 768px structure- ............................................ */
+
+
+@media (min-width: 768px)
+{
+  .navbar-custom 
+  {
+    .navbar-collapse 
+    {
+      margin-right: -45px;
+      margin-left: -15px;
+      padding-right: 15px;
+      padding-left: 15px;
+      box-shadow: none;
+    }
+
+    .navbar-nav 
+    {
+      width: 100%;
+      li
+      {
+        width: 14.28%;
+      }
+    }
+  }
+}
+

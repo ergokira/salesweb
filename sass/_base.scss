@@ -1,0 +1,49 @@
+//Import Compass
+@import "compass/reset";
+@import "compass";
+
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
+
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap for Sass
+@import "bootstrap";
+
+// Import Boostrap Custom
+@import "bootstrap-custom";
+
+//Sprites
+@import "icon/*.png";
+@include all-icon-sprites;
+
+
+
+//Mixins
+
+@mixin imageWithDimensions($image)
+{
+	background: image-url($image) no-repeat;
+	width: image-width($image);
+	height: image-height($image);
+}
+
+@mixin dimensionsBySpriteImage($image)
+{
+	height: icon-sprite-height($image);
+	width: icon-sprite-width($image);
+}
+
+
+//variables
+
+$orange_font: #fe6c3d;
+$plus_color: #8cd35b;
+
+$orange_background: #dc6028;
+
+$blue_background: #0c1729;
+
+$main_font: "Myriad Pro", sans-serif;
+$secondary_font: "Kozuka Gothic Pr6N", times;

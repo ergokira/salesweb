@@ -1,0 +1,837 @@
+//Basic Import
+@import "base";
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* .............................................. - 1. header - ............................................. */
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Mobile
+.header-main
+{
+	.logo
+	{
+		a
+		{
+			margin: 0 auto;
+			display: block;
+			@include text-hide();
+			@include imageWithDimensions("logo_mobile.png");
+		}
+	}
+
+	.social-connections
+	{
+		display: none;
+	}	
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (min-width: 768px)
+{
+	.header-main
+	{
+		.col-md-4
+		{
+			position: relative;
+		}
+
+
+		.logo
+		{	
+			float: left;
+
+			a
+			{
+				@include imageWithDimensions("logo.png");
+			}
+		}
+
+		.social-connections
+		{	
+
+			position: absolute;
+			right: 15px;
+			top: 60px;
+			display: block;
+
+			ul
+			{
+				float: right;
+			}
+			.number
+			{
+				font: italic 15.8pt $main_font;
+				font-weight: 570;
+				color: #5f5f61;
+				padding-right: 5px;
+				margin-top: -3px;
+			}
+			li, .number
+			{	
+				padding-left: 4px;
+				float: right;
+
+				a
+				{
+
+					display: block;
+					@include text-hide();
+					@include dimensionsBySpriteImage(twitter_small);
+				}
+			}
+		}
+	}
+}
+
+//heaver-nav
+
+.header-nav
+{
+	background-color: #df572b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* ............................................ - 2. section-banner - ............................................ */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Mobile
+.section-banner
+{
+	background: image-url("banner_mobile.jpg") no-repeat;
+	border-bottom: 13px solid $orange_main;
+
+	.content
+	{
+		text-align: center;
+	}
+
+	h2, h3
+	{
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+
+	h3
+	{
+		font: 13.5px $secondary_font;
+		font-weight: 200;
+		margin-top: 30px;
+		color: $white_color_font;
+		line-height: 1.2;
+		@include text-shadow(rgba(black, 0.5) 2px 2px 2px);
+	}
+
+	h2
+	{
+		font: bold 20px $main_font;
+		color: $orange_font;
+		margin-top: 0;
+		line-height: 1.2;
+	}
+
+	h4
+	{
+		font: 15px $main_font;
+		font-weight: 300;
+		margin: 0 15px 30px 15px;
+		color: $white_color_font;
+	}
+	.green-button
+	{
+		margin-bottom: 30px;
+	}
+	
+}
+
+.plus
+{
+	color: $plus_color;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (min-width: 480px)
+{
+	.section-banner
+	{
+
+		h2
+		{
+			font-size: 32px;
+		}
+		
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (min-width: 768px)
+{
+	.section-banner
+	{
+		background: image-url("banner.jpg") no-repeat;
+		background-size: cover;
+		
+		.content
+		{
+			border: #506576 1px solid;
+			background-color: rgba(0, 0, 0, 0.3);
+			margin-top: 25px;
+			margin-bottom: 30px;
+		}
+		h3
+		{
+			font-size: 30px;
+			line-height: 0.95;
+		}
+
+		h2
+		{
+			font-size: 60px;
+			line-height: 0.95;
+		}
+
+		h4
+		{
+			margin: 0 30px 20px 30px;
+		}
+		.green-button
+		{
+			margin-bottom: 40px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+/* ............................................ - 3. section-alfa - ............................................ */
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Mobile
+.section-alfa
+{
+	text-align: center;
+	.icon-orange_1, .icon-orange_2, .icon-orange_3
+	{
+		@include dimensionsBySpriteImage(orange_1);
+		margin: 0 auto;
+		display: block;
+	}
+
+	h3
+	{
+		font: 18px/1.5 $secondary_font;
+		margin-top: 30px;
+		margin-bottom: 0;
+	}
+
+	h5
+	{
+		font: 14px/1.5 $main_font;
+		color: #ea672b;
+		text-transform: uppercase;
+		margin-top: 0;
+		margin-bottom: 35px;
+	}
+
+	h2
+	{
+		font: 29px/1 $main_font;
+		margin-bottom: 40px;
+	}
+
+	h4
+	{
+		font: italic 25px/1 $main_font;
+		font-weight: 500;
+		margin-top: 20px;
+		margin-bottom: 15px;
+	}
+
+	p
+	{
+		font: italic 17px/1.5 $main_font;
+	}
+
+	hr
+	{
+		display: none;
+	}
+
+	.green-button
+	{
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}	
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (min-width: 768px)
+{
+	.section-alfa
+	{
+
+		position: relative;
+
+		h5
+		{
+			font-size: 15px;
+			margin-bottom: 0;
+		}
+
+		.green-button
+		{
+			display: none;
+		}
+		
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (min-width: 992px)
+{
+	.section-alfa
+	{
+
+		.content
+		{
+			position: relative;
+		}
+
+		h3
+		{
+			font-size: 30px;
+			margin-bottom: 30px;
+		}
+
+		h5
+		{
+			margin-bottom: 0;
+		}
+
+		hr
+		{
+			position: absolute;
+			display: block;
+			width: 300px;
+			height: 1px;
+			background-color: #c4c4c4;
+			bottom: 15%;
+		}	
+
+		.hr-left
+		{
+			left: 5%;
+		}
+
+		.hr-right
+		{
+			right: 5%;				
+		}
+		
+	}
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (min-width: 1200px)
+{
+	.section-alfa
+	{
+		hr
+		{
+			width: 400px;
+		}	
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+/* ............................................ - 4. section-beta - ............................................ */
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Mobile
+.section-beta
+{
+	background: #eb672b;
+	color: $white_color_font;
+	text-align: center;
+
+	h4
+	{
+		font: 14px/1 $main_font;
+		margin-top: 32px;
+		margin-bottom: 0;
+	}
+
+	h2
+	{
+		font: bold 20px/1 $main_font;
+		margin-top: 0;
+		margin-bottom: 32px;
+	}
+
+	h3
+	{
+		font: 15px/1 $secondary_font;
+		font-weight: 300;
+	}
+
+	p
+	{
+		font: 13px/1.5 $main_font;
+		margin-bottom: 45px;
+	}
+
+	hr
+	{
+		display: none;
+	}
+
+	.green-button
+	{
+		display: none;
+	}
+	
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media (min-width: 480px)
+{
+	.section-beta
+	{
+
+		h2
+		{
+			font-size: 26px;
+		}
+
+		h3
+		{
+			font-size: 16px;
+		}
+
+		p
+		{
+			font-size: 14px;
+		}
+		
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (min-width: 768px)
+{
+	.section-beta
+	{
+		background: image-url("orange_background.jpg") no-repeat;
+		background-size: cover;
+
+		h4
+		{
+			margin-top: 54px;
+			margin-bottom: 10px;
+		}
+
+		h2
+		{
+			font-size: 38px;
+			margin-bottom: 54px;
+		}
+
+		h3
+		{
+			font-size: 30px;
+		}
+
+		p
+		{
+			font-size: 16px;
+		}
+
+		.green-button
+		{
+			display: inline;
+		}
+		
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (min-width: 992px)
+{
+	.section-beta
+	{
+		.content
+		{
+			position: relative;
+		}
+		h2
+		{
+			font-size: 53px;
+		}
+
+		hr
+		{
+			position: absolute;
+			display: block;
+			width: 150px;
+			height: 1px;
+			background-color: #FFF;
+			top: 0;
+			margin-top: 3px;
+		}	
+
+		.hr-left
+		{
+			left: 18%;
+		}
+
+		.hr-right
+		{
+			right: 18%;			
+		}		
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (min-width: 1200px)
+{
+	.section-beta
+	{
+		.hr-left
+		{
+			left: 23%;
+		}
+
+		.hr-right
+		{
+			right: 23%;
+		}		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+/* ................................................ - 5. footer - ................................................ */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Mobile
+.footer-main
+{
+	background-color: #0c1729;
+
+	.content
+	{
+		color: $white_color_font;
+		margin: 0 auto;
+		width: 280px;
+	}
+
+	.call, .number, .follow, h4
+	{
+		font: 14px/1 $secondary_font;
+		font-weight: 300;
+	}
+
+	.call
+	{
+		border-bottom: 2px #868b94 dashed;
+		margin-top: 18px;
+		padding-bottom: 13px;
+	}
+
+	.number
+	{
+		font-size: 26px;
+		padding-left: 10px;
+	}
+
+	.follow
+	{
+		margin-bottom: 17px;
+		p
+		{
+			float: left;
+			font-size: 20px;
+			margin-top: 20px;
+			padding-right: 5px;
+		}
+	}
+
+	h4
+	{
+		text-align: center;
+		font-size: 11px;
+		color: #eb672b;
+		margin-bottom: 25px;
+	}
+
+	.copyright
+	{
+		text-align: center;
+		font: 12px/1 $main_font;
+		margin-bottom: 45px;
+	}	
+
+	.social-connections
+	{	
+		padding: 0;
+
+		li
+		{	
+			padding-left: 5px;
+			display: inline-block;
+		}
+		a
+		{
+			display: inline-block;
+			@include text-hide();
+			@include dimensionsBySpriteImage(twitter_medium);
+		}	
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (min-width: 768px)
+{
+	.footer-main
+	{
+		.content
+		{
+			margin: 0;
+			padding: 0;
+			width: 100%;
+		}
+
+		.contact-us
+		{
+			border-bottom: 2px #868b94 dashed;
+			overflow: hidden;
+			margin-top: 32px;
+			padding-bottom: 12px;
+		}
+
+		.call
+		{
+			font-size: 21px;
+			border-bottom: none;
+			float: left;
+			margin: 25px 0 0 20px;
+			p
+			{
+				margin: 0;
+			}
+		}
+
+		.number
+		{
+			font-size: 39px;
+		}
+
+		.follow
+		{
+			float: right;
+			margin: 20px 20px 0 0;
+
+			p
+			{
+				font-size: 21px;
+				margin-bottom: 0;
+			}
+		}
+
+		h4
+		{
+			font-size: 19px;
+			margin-bottom: 15px;
+			clear: both;
+		}
+
+		.social-connections
+		{	
+			float: left;
+		}
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (min-width: 992px)
+{
+	.footer-main
+	{
+		.call
+		{
+			margin-left: 72px;
+		}
+
+		.follow
+		{
+			margin-right: 72px;
+		}
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (min-width: 1200px)
+{
+	.footer-main
+	{
+		.call
+		{
+			margin-left: 142px;
+		}
+
+		.follow
+		{
+			margin-right: 142px;
+		}
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//IE//
+
+// @media (min-width: 768px)
+// {
+// 	.ie
+// 	{
+// 		.footer-main
+// 		{
+// 			.call
+// 			{
+// 				margin-bottom: -20px;
+// 			}
+// 		}
+// 	}
+// }	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+/* ........................................... - 6. green-button - .............................................. */
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.green-button
+{
+	width: 185px; 
+	height: 50px; 
+	background: #58ac17;
+	border: #58ac17 2.5px solid;
+	color: $white_color_font;
+	@include border-radius(12px, 12px);
+	@include background-image(linear-gradient(#b1e291, #58ac17 40%, #58ac17 70%, #b1e291 120%));
+	@include text-shadow(rgba(black, 0.5) 2px 2px 2px);
+	@include box-shadow(rgba(black, 0.5) 2px 2px 10px);
+	&:hover
+	{
+		border-color: #ccc;
+	}
+
+	span
+	{
+		display: none;
+	}
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (min-width: 768px)
+{
+	.green-button
+	{
+		width: 328px;
+		height: 80px;
+		margin-bottom: 50px;
+		font-size: 26px;
+		line-height: 0.85;
+
+		span
+		{
+			display: inline;
+			font-size: 11px;
+		}
+	}
+}
